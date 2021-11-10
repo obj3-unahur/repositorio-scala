@@ -32,6 +32,15 @@ En la Etapa 3 vamos a implementar los métodos del trait que trabajan sobre una 
 1. Realizar el método `get` que recibe un id y devuelve el elemento con la misma identificación.
 2. Realizar el método `update`, que además del id, recibe la forma en que debe actualizarse dicho elemento.
 
+## Bonus: Etapa 4
+
+En esta etapa se busca la posibilidad de realizar una forma de **OneToMany**. Para esto, se debe agregar la siguiente definición al trait **Repositorio**
+```scala
+def oneToMany[U](elementos: List[(Int, U)]): mutable.HashMap[T, List[U]]
+```
+
+En este método, recibimos una lista de tuplas, donde cada tupla contiene el id del elemento T y un elemento de clase U. Al ejecutarlo, debemos retornar un HashMap en donde cada instancia de T que estén guardados en el repositorio sean las claves, y como valor, debe poseer una Lista de elementos U que contenga todos los valores que corresponden con su id (o una lista vacía si no había elementos U para el id del elemento T correspondiente).
+
 ---
 
 Al finalizar, deberían poder ejecutar algo así:
