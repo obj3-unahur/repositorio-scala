@@ -32,12 +32,16 @@
 //
 //  "Store" - {
 //    "Deberia guardar" in {
-//      repo.store(guido) should be (true)
+//      repo.store(guido)
+//      val estudiantes = repo.get()
+//      estudiantes.size should be (1)
 //    }
 //
-//    "Deberia dar false si guardo 2 veces al mismo" in {
+//    "No deberia guardar 2 veces al mismo" in {
 //      repo.store(guido)
-//      repo.store(guido) should be (false)
+//      repo.store(guido)
+//      val estudiantes = repo.get()
+//      estudiantes.size should be (1)
 //    }
 //  }
 //
