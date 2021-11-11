@@ -1,15 +1,13 @@
 package ar.edu.unahur
 
-import java.util.NoSuchElementException
-
 class RepositorioEnMemoria[T] extends Repositorio[T] {
   override def get(): List[T] = ???
 
   override def has(t: T): Boolean = ???
 
-  override def store(t: T): Unit = {}
+  override def store(t: T): Unit = ???
 
-  override def delete(t: T): Unit = throw new NoSuchElementException
+  override def delete(t: T): Unit = ???
 
   override def get(condicion: Function[T, Boolean]): List[T] = ???
 

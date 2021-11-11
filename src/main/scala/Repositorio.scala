@@ -10,7 +10,10 @@ trait Repositorio[T] {
   // Te permite guardar un nuevo elemento.
   def store(t: T): Unit
 
-  // Te permite eliminar al elemento t.
+  /**
+   * Elimina al elemento del repositorio.
+   * @throws NoSuchElementException si el elemento no existe.
+   */
   def delete(t: T): Unit
 
   // Te devuelve todos los elementos que cumplan la condición.

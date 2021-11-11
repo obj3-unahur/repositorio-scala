@@ -18,9 +18,9 @@ En el código que viene con el TP tenemos definido el **trait Repositorio**, cuy
 En esta etapa tienen que crear una clase `RepositorioEnMemoria[T]`, que implemente los siguientes métodos:
 
 1. `get()`, que nos debe devolver toda la lista de elementos que contenga el Repositorio.
-2. `has(element)` que devuelve `true` si el elemento se encuentra guardado en el Repositorio o `false` en caso contrario.
+2. `has(element)`, que devuelve `true` si el elemento se encuentra guardado en el Repositorio o `false` en caso contrario.
 3. `store(element)`, que guarda el elemento en el Repositorio.
-4. `delete(element)` que recibe el elemento a eliminar, y lo elimina del repositorio.
+4. `delete(element)`, que recibe el elemento a eliminar, y lo elimina del repositorio. :warning: Si el elemento no existe, debe arrojar una `NoSuchElementException`.
 
 ☝️ Para que terminen de comprender cómo se tiene que comportar el repositorio, les dejamos una suite completa de tests en el archivo `Etapa1Tests.scala`. Esas pruebas deberían pasar cuando completen esta etapa.
 
