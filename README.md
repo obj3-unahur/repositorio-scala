@@ -19,7 +19,7 @@ En esta etapa tienen que crear una clase `RepositorioEnMemoria[T]`, que implemen
 
 1. `get()`, que nos debe devolver toda la lista de elementos que contenga el Repositorio.
 2. `has(element)` que devuelve `true` si el elemento se encuentra guardado en el Repositorio o `false` en caso contrario.
-3. `store(element)`, que guarda el elemento en el Repositorio. **Ojo:** si el elemento ya existía no debe volver a guardarse. Para informar el resultado, el método devuelve `true` si pudo guardar el nuevo elemento o `false` si el mismo elemento ya se encontraba en el Repositorio.
+3. `store(element)`, que guarda el elemento en el Repositorio.
 4. `delete(element)` que recibe el elemento a eliminar, y lo elimina del repositorio.
 
 ☝️ Para que terminen de comprender cómo se tiene que comportar el repositorio, les dejamos una suite completa de tests en el archivo `Etapa1Tests.scala`. Esas pruebas deberían pasar cuando completen esta etapa.
@@ -28,21 +28,17 @@ En esta etapa tienen que crear una clase `RepositorioEnMemoria[T]`, que implemen
 
 Vamos a agregar a nuestro repositorio algunos métodos que reciben funciones por parámetro:
 
-1. `get(condicion)`, que devuelve una lista con los elementos que cumplen la `condición`,
-2. `update(condicion, actualizacion)`, que aplica la función de `actualización` **únicamente** a los elementos que cumplen con la `condición`,
+1. `get(condicion)`, que devuelve una lista con los elementos que cumplen la `condición`.
+2. `update(condicion, actualizacion)`, que aplica la función de `actualización` **únicamente** a los elementos que cumplen con la `condición`.
 3. `delete(condicion)`, que elimina todos los elementos que cumplen la condición.
-
-Para más detalles sobre qué deben devolver estos métodos, lean los comentarios que están en el trait `Repositorio[T]`.
 
 ### Etapa 3 - elementos con id
 
 Vamos a agregar ahora una restricción a nuestro repositorio: todos los elementos que allí se guarden deberán tener un atributo `id` de tipo entero. 
 
 1. Modificar el trait `Repositorio[T]` para que solamente acepte objetos que tengan un atributo `id` de tipo entero.
-1. Agregar el método `get(id)`, que devuelve el elemento cuyo id coincide con el parámetro.
-2. Agregar el método `update(id, actualizacion)`, que aplica la función de `actualizacion` sobre el elemento que coincida con el `id` especificado.
-
-Para más detalles sobre qué deben devolver estos métodos, lean los comentarios que están en el trait `Repositorio[T]`.
+2. Agregar el método `get(id)`, que devuelve el elemento cuyo id coincide con el parámetro o `null` si no hay un elemento con ese id.
+3. Agregar el método `update(id, actualizacion)`, que aplica la función de `actualizacion` sobre el elemento que coincida con el `id` especificado.
 
 ### Bonus: Etapa 4
 
