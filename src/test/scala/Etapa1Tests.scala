@@ -5,17 +5,16 @@
 //import org.scalatest.matchers.should.Matchers
 //
 //class Estudiante(val name: String, var age: Int)
-//class EstudianteRepositorioEnMemoria extends RepositorioEnMemoria[Estudiante]
 //
 //class Etapa1Tests extends AnyFreeSpec with Matchers with BeforeAndAfterEach {
-//  var repo: EstudianteRepositorioEnMemoria = null
+//  var repo: RepositorioEnMemoria[Estudiante] = null;
 //
 //  val guido = new Estudiante("Guido", 20)
 //  val angel = new Estudiante("Angel", 25)
 //
 //  override protected def beforeEach(): Unit = {
 //    super.beforeEach()
-//    repo = new EstudianteRepositorioEnMemoria
+//    repo = new RepositorioEnMemoria[Estudiante]()
 //  }
 //
 //  "Get" - {

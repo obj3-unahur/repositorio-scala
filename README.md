@@ -46,9 +46,6 @@ Para más detalles sobre qué deben devolver estos métodos, lean los comentario
 
 ### Bonus: Etapa 4
 
-En esta etapa se busca la posibilidad de realizar una forma de **OneToMany**. Para esto, se debe agregar la siguiente definición al trait **Repositorio**
-```scala
-def oneToMany[U](elementos: List[(Int, U)]): mutable.HashMap[T, List[U]]
-```
+Para esta nueva etapa vamos a tener que modificar la funcionalidad del método `store(element)`. Con este nuevo requerimiento, al guardar el elemento en Repositorio, se le debe asignar el `id` válido.
 
-En este método, recibimos una lista de tuplas, donde cada tupla contiene el id del elemento T y un elemento de clase U. Al ejecutarlo, debemos retornar un HashMap en donde cada instancia de T que estén guardados en el repositorio sean las claves, y como valor, debe poseer una Lista de elementos U que contenga todos los valores que corresponden con su id (o una lista vacía si no había elementos U para el id del elemento T correspondiente).
+Dicho `id` válido es el entero siguiente al mayor `id` que se encuentre guardado en el Repositorio al momento de hacer `store(element)`.

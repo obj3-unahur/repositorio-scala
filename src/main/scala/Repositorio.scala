@@ -33,4 +33,6 @@ trait Repositorio[T] {
               actualizacionARealizar: T => Unit,
               id: Int
             ): Boolean
+
+
 }
